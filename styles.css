@@ -30,12 +30,10 @@ a {
 .container1 {
     width: 1920px;
 } */
-.container img{
-    margin-bottom: 50px;
-}
 
 .container img {
     width: 200px;
+    margin-bottom: 50px;
 }
 	
 

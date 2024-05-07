@@ -34,6 +34,10 @@ a {
     width: 1920px;
 } */
 
+.fab {
+    margin-right: 10px; /* Añade un margen a la derecha del icono */
+}
+
 .container img {
     width: 280px;
     margin-bottom: 50px;
@@ -93,19 +97,19 @@ a {
         color: #2d2a32;
         border-radius: 5px;
         /* Tus otros estilos aquí */
-        animation: buttonEffect 20s ease-in-out forwards;
+        animation: buttonEffect 5s ease-in-out forwards;
     }
     
     @keyframes buttonEffect {
         0% {
             /* Tus estilos iniciales aquí, por ejemplo: */
-            background-color: #fff;
-            color: #2d2a32;
+            background-color: #cb9500;
+            color: #fff;
         }
         100% {
             /* Tus estilos finales aquí, por ejemplo: */
-            background-color: #cb9500;
-            color: #fff;
+            background-color: #fff;
+            color: #2d2a32;
         }
     }
 }

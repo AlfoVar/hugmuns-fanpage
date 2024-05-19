@@ -1,15 +1,17 @@
-<!-- <IfModule mod_rewrite.c>
-RewriteEngine on
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.*)$ $1.php
-#RewriteRule ^([a-z]+)/?$ $1.php [NC]
-
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ $1.html
-#RewriteRule ^([a-z]+)/?$ $1.html [NC]
-
-</IfModule> -->
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    
+    # Eliminar extensión .php de las URLs
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.*)$ $1.php [L]
+    
+    # Eliminar extensión .html de las URLs
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.*)$ $1.html [L]
+    
+    # Forzar HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>

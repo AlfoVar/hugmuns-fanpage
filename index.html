@@ -1,51 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página en construcción</title>
-    <link rel="shortcut icon" href="/img/Emblema Hungmuns.png">
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugmuns MG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Celtic+Garamond+the+2nd&display=swap" rel="stylesheet">
     <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        font-family: Arial, sans-serif;
-        background-color: #cb9500;
-        margin: 0;
-        padding: 0; 
-      }
-
-      h1 {
-        font-size: 24px;
-        text-align: center;
-        color: #333;
-      }
-
-      .image {
-        width: 50%;
-        height: 100%;
-        background-image: url("blanckState_fianal.jpg");
-        background-size: 100% auto; 
-        background-repeat: no-repeat;
-        overflow: hidden;
-        background-position: center;
-      }
-
-      @media (max-width: 600px) {
-        .image {
-          background-image: url("phone-image.jpg");
-          width: 54%; 
-          height: 52vh; 
-          background-size: cover; 
-          background-repeat: no-repeat;
-          background-position: center;
+        body {
+            background-color: #0F0F0F;
+            color: #FFFFFF;
+            font-family: 'Celtic Garamond the 2nd', serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-      }
+        h1 {
+            color: #EAC201;
+            margin-bottom: 30px;
+        }
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .chapter-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        .chapter-button img {
+            width: 150px;
+            height: 150px;
+            border-radius: 15px;
+            transition: transform 0.2s;
+        }
+        .chapter-button:hover img {
+            transform: scale(1.05);
+        }
+        @media (min-width: 600px) {
+            .buttons-container {
+                flex-direction: row;
+            }
+        }
     </style>
-  </head>
-  <body>
-    <div class="image"></div>
-  </body>
+</head>
+<body>
+  <div class="buttons-container">
+      <button class="chapter-button" onclick="location.href='sede/index.html'">
+          <img src="img/img-sede.png" alt="Bogotá DC">
+      </button>
+      <button class="chapter-button" onclick="location.href='eje_cafetero.html'">
+          <img src="img/img-eje.png" alt="Eje Cafetero">
+      </button>
+  </div>
+</body>
 </html>
